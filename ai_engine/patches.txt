@@ -4,3 +4,5 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+ai_engine.patches.v1_0.seed_embedding_apis_from_llm
+ai_engine.patches.v1_0.seed_ollama_embedding_models

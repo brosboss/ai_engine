@@ -83,7 +83,8 @@ app_license = "mit"
 # ------------
 
 # before_install = "ai_engine.install.before_install"
-# after_install = "ai_engine.install.after_install"
+after_install = "ai_engine.install.after_install"
+after_migrate = "ai_engine.install.after_migrate"
 
 # Uninstallation
 # ------------
