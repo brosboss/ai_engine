@@ -1,0 +1,138 @@
+{
+ "actions": [],
+ "creation": "2026-06-12 16:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "provider_name",
+  "api_tier",
+  "is_default",
+  "enabled",
+  "column_break_api",
+  "api_base_url",
+  "text_model",
+  "vision_model",
+  "embedding_model",
+  "api_key",
+  "fallback_section",
+  "fallback_model",
+  "column_break_fallback",
+  "fallback_provider",
+  "extra_headers",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "provider_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Provider Name",
+   "reqd": 1
+  },
+  {
+   "default": "Free Tier",
+   "fieldname": "api_tier",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "API Tier",
+   "options": "Free Tier\nPaid",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Default"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_api",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "api_base_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "API Base URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "text_model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Text Model",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vision_model",
+   "fieldtype": "Data",
+   "label": "Vision Model (OCR)",
+   "reqd": 1
+  },
+  {
+   "default": "text-embedding-3-small",
+   "description": "OpenAI-compatible embeddings model. Leave blank if this provider does not support /embeddings.",
+   "fieldname": "embedding_model",
+   "fieldtype": "Data",
+   "label": "Embedding Model"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "fallback_section",
+   "fieldtype": "Section Break",
+   "label": "Fallbacks",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "fallback_model",
+   "fieldtype": "Data",
+   "label": "Fallback Model (same provider)",
+   "description": "Tried next if the Text Model is overloaded or unavailable."
+  },
+  {
+   "fieldname": "column_break_fallback",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fallback_provider",
+   "fieldtype": "Data",
+   "label": "Fallback Provider",
+   "description": "Provider Name of another enabled row in this table. Tried after this provider's models fail."
+  },
+  {
+   "description": "Optional JSON object for provider-specific HTTP headers.",
+   "fieldname": "extra_headers",
+   "fieldtype": "Small Text",
+   "label": "Extra Headers (JSON)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-05 13:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Ai Engine",
+ "name": "AI Engine LLM API",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
